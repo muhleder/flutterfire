@@ -42,6 +42,7 @@ class FirebaseAuthWeb extends FirebaseAuthPlatform {
   }
 
   PlatformUser _fromJsUser(firebase.User user) {
+    if (user == null) return;
     return PlatformUser(
       providerId: user.providerId,
       uid: user.uid,
